@@ -56,3 +56,6 @@ footer {
   padding: 20px;
   background-color: #eee;
 }
+body {
+  background: linear-gradient(to bottom, #ff8800 0%, #000 100%);
+}
