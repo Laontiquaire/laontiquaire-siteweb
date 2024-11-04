@@ -54,3 +54,17 @@ a:hover {
 body {
   background: linear-gradient(to bottom, #ff8800 0%, #000 100%);
 }
+
+
+@media screen and (max-width: 768px) {
+  /* Styles pour les écrans de taille inférieure à 768px */
+  header {
+    flex-direction: column;
+  }
+  main {
+    flex-direction: column;
+  }
+  section {
+    width: 100%;
+  }
+}
