@@ -1,1 +1,43 @@
+/* Styles de la page d'accueil */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
 
+.logo {
+  width: 100px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+section {
+  width: 40%;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+}
