@@ -1,8 +1,7 @@
 # Roadmap
 
 ## Structure concept
-1. Page affichage des produits
-2. Notre engagement
+1. Page affichage des produits 
 
 
 # Terminé
@@ -15,3 +14,4 @@
 6. Le logo (favicon) et sur la page main ✔
 7. Contacter ✔
 8. Lien sociaux ✔
+9. Notre engagement ✔
