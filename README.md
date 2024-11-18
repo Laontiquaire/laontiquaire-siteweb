@@ -1,7 +1,13 @@
 # Roadmap
 
 ## Structure concept
-1. Page affichage des produits 
+ 1.Icon Produit
+ 
+ 2.Logo Officiel
+ 
+ 3.Rendre plus propre
+
+ 4.Acceder à la page du produit
 
 
 # Terminé
@@ -15,3 +21,4 @@
 7. Contacter ✔
 8. Lien sociaux ✔
 9. Notre engagement ✔
+10. Page affichage des produits ✔
