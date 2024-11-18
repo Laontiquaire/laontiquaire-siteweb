@@ -62,3 +62,24 @@ header h1 {
   text-decoration: none;
   color: inherit;
 }
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Century Gothic', sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.home-button:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
