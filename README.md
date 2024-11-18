@@ -1,12 +1,11 @@
 # Roadmap
 
 ## Structure concept
-1. Main page: La présentation de l'entreprise
-2. Le logo (favicon) et sur la page main
-3. Page affichage des produits
-4. Notre engagement
-5. Lien sociaux
-6. Contacter
+1. Le logo (favicon) et sur la page main
+2. Page affichage des produits
+3. Notre engagement
+4. Lien sociaux
+5. Contacter
 
 
 # Terminé
@@ -15,3 +14,4 @@
 2. Runner NodeJS: ✔
 3. Création fichier index.html: ✔
 4. Structure des css / html / js: ✔
+5. Main page: La présentation de l'entreprise✔
