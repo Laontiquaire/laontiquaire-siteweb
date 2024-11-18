@@ -1,1 +1,44 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laontiquaire - Produits</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Laontiquaire</h1>
+  </header>
+  <main>
+    <div class="product-list">
+      <!-- Exemple de produit -->
+      <div class="product">
+        <a href="product1.html">
+          <img src="https://via.placeholder.com/150" alt="Produit 1">
+          <p>Produit 1</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product2.html">
+          <img src="https://via.placeholder.com/150" alt="Produit 2">
+          <p>Produit 2</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product3.html">
+          <img src="https://via.placeholder.com/150" alt="Produit 3">
+          <p>Produit 3</p>
+        </a>
+      </div>
+      <div class="product">
+        <a href="product4.html">
+          <img src="https://via.placeholder.com/150" alt="Produit 4">
+          <p>Produit 4</p>
+        </a>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
