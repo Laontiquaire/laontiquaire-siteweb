@@ -3,8 +3,6 @@
 ## Structure concept
 1. Page affichage des produits
 2. Notre engagement
-3. Lien sociaux
-4. Contacter
 
 
 # Terminé
@@ -15,3 +13,5 @@
 4. Structure des css / html / js: ✔
 5. Main page: La présentation de l'entreprise✔
 6. Le logo (favicon) et sur la page main ✔
+7. Contacter ✔
+8. Lien sociaux ✔
