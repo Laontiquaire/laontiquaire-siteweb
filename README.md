@@ -7,6 +7,8 @@
  
  3.Rendre plus propre
 
+ 4.Acceder à la page du produit
+
 
 # Terminé
 ## Création de la base du site web: ✔
