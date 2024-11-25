@@ -1,5 +1,12 @@
 # Roadmap
+## Refonte CSS
+ 1. Refonte du style de la page principal
+ 2. Refonte du style de la page de l'affichage des produits
+ 3. Refonte du style de la page d'achat des produits
 
+### IDEE DE CONCEPTION
+
+# Impossible
 ## Structure concept
  1.Icon Produit
  
