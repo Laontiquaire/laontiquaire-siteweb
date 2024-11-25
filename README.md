@@ -7,9 +7,7 @@
  
  3.Rendre plus propre
 
- 4.Acceder à la page du produit
-
- 5.Page Evenement
+ 4.Page Evenement
 
 # Terminé
 ## Création de la base du site web: ✔
@@ -23,3 +21,4 @@
 8. Lien sociaux ✔
 9. Notre engagement ✔
 10. Page affichage des produits ✔
+11. Acceder à la page du produit ✔
