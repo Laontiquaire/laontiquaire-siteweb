@@ -4,10 +4,8 @@
  1.Icon Produit
  
  2.Logo Officiel
- 
- 3.Rendre plus propre
 
- 4.Page Evenement
+ 3.Page Evenement
 
 # Terminé
 ## Création de la base du site web: ✔
@@ -22,3 +20,4 @@
 9. Notre engagement ✔
 10. Page affichage des produits ✔
 11. Acceder à la page du produit ✔
+12. Rendre plus propre ✔
