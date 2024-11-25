@@ -9,6 +9,7 @@
 
  4.Acceder à la page du produit
 
+ 5.Page Evenement
 
 # Terminé
 ## Création de la base du site web: ✔
