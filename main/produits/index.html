@@ -3,37 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produits - Laontiquaire </title>
+  <title>Produits - Laontiquaire</title>
   <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
+  <!-- En-tête -->
   <header>
+    <img src="/logo/logo.png" alt="Logo Laontiquaire">
     <h1>Laontiquaire</h1>
   </header>
+
+  <!-- Liste des produits -->
   <main>
-    <div class="button-container">
-      <a href="/" class="home-button">Retourner à l'accueil</a>
     <div class="product-list">
-      <!-- Liste des produits -->
+      <!-- Produit 1 -->
       <div class="product">
         <a href="/produits/livres">
-          <img src="https://via.placeholder.com/150" alt="Produit 1">
-          <p>Livres</p>
+          <img src="https://via.placeholder.com/250" alt="Livres">
+          <div class="product-info">
+            <p class="product-title">Livres</p>
+            <p class="product-description">Découvrez notre collection de livres captivants.</p>
+          </div>
         </a>
       </div>
+
+      <!-- Produit 2 -->
       <div class="product">
         <a href="/produits/jds">
-          <img src="https://via.placeholder.com/150" alt="Produit 2">
-          <p>Jeux de société</p>
+          <img src="https://via.placeholder.com/250" alt="Jeux de société">
+          <div class="product-info">
+            <p class="product-title">Jeux de société</p>
+            <p class="product-description">Amusez-vous avec nos jeux de société pour tous les âges.</p>
+          </div>
         </a>
       </div>
+
+      <!-- Produit 3 -->
       <div class="product">
         <a href="/produits/tdt">
-          <img src="/produits/logo/theatre.png" alt="Produit 3">
-          <p>Ticket théatre</p>
+          <img src="/produits/logo/theatre.png" alt="Tickets théâtre">
+          <div class="product-info">
+            <p class="product-title">Tickets théâtre</p>
+            <p class="product-description">Réservez vos places pour nos pièces de théâtre exceptionnelles.</p>
+          </div>
         </a>
+      </div>
     </div>
   </main>
+
+  <!-- Bouton de retour -->
+  <div class="button-container">
+    <a href="/" class="home-button">Retourner à l'accueil</a>
+  </div>
+
   <script src="catalog.js"></script>
 </body>
 </html>
