@@ -6,7 +6,7 @@
 
 ### IDEE DE CONCEPTION
 
-# Impossible
+# Impossible (pour le moment)
 ## Structure concept
  1.Icon Produit
  
