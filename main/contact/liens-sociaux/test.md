@@ -1,4 +1,0 @@
-MARKDOWN
-# test
-**test**
-*t*
