@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acheter des jeux de société - Laontiquaire</title>
+    <title>Jeux de société - Laontiquaire</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="product-page">
-        <header>
-            <h1>jeux de société</h1>
-        </header>
-        <main>
-            <div class="product-container">
-                <img src="produit.jpg" alt="Image du produit" class="product-image">
-                <div class="product-details">
-                    <p class="product-description">
-                        Notre jeux de société quiz sur laon
-                    </p>
-                    <p class="product-price">Prix : [prix]</p>
-                    <button id="buy-button" class="buy-button">Acheter maintenant</button>
-                </div>
+    <header class="header">
+        <div class="logo">Laontiquaire</div>
+        <nav>
+            <button id="back-home-button" class="nav-btn">Accueil</button>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="product-card">
+            <img src="/produits/logo/" alt="Image du produit" class="product-image">
+            <div class="product-info">
+                <h1>Jeux de société</h1>
+                <p class="product-description">
+                    Notre jeux de société est [bla bla]
+                </p>
+                <p class="product-price">Prix : [prix]</p>
+                <button id="buy-button" class="btn primary-btn">Acheter maintenant</button>
             </div>
-        </main>
-        <footer>
-            <p>© 2024 Laontiquaire</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Laontiquaire. Tous droits réservés.</p>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
