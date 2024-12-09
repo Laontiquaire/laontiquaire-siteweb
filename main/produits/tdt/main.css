@@ -1,13 +1,14 @@
+/* Styles généraux */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
     color: #333;
 }
 
 .product-page {
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
 }
@@ -15,6 +16,8 @@ body {
 header h1 {
     text-align: center;
     color: #444;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .product-container {
@@ -22,32 +25,47 @@ header h1 {
     align-items: center;
     gap: 20px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .product-image {
     width: 300px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
 }
 
 .product-details {
-    max-width: 600px;
+    max-width: 500px;
+}
+
+.product-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #222;
 }
 
 .product-description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .product-price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
+    color: #007bff;
     margin-bottom: 20px;
 }
 
-.buy-button {
+.buy-button,
+.back-button {
+    display: inline-block;
     background-color: #007bff;
     color: white;
     border: none;
@@ -55,32 +73,24 @@ header h1 {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.buy-button:hover {
+.buy-button:hover,
+.back-button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
-.how-to-buy {
-    margin-top: 40px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.how-to-buy h2 {
-    margin-bottom: 10px;
-}
-
-.how-to-buy ol {
-    padding-left: 20px;
-    list-style-type: decimal;
+.back-home {
+    text-align: center;
+    margin-top: 30px;
 }
 
 footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
     color: #666;
 }
