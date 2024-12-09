@@ -48,8 +48,8 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.social-button.twitter {
-    background: #1da1f2;
+.social-button.snapchat {
+    background: linear-gradient(45deg, #c8ff00, #ffd900, #ffaf04);
 }
 
 .social-button.instagram {
