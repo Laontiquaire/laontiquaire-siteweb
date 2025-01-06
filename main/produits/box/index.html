@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box - Laontiquaire</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Laontiquaire</div>
+        <nav>
+            <button id="back-home-button" class="nav-btn">Accueil</button>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="product-card">
+            <img src="/produits/logo/box.png" alt="Image du produit" class="product-image">
+            <div class="product-info">
+                <h1>Box</h1>
+                <p class="product-description">
+                    Personnalisez votre box avec les options de votre choix !
+                </p>
+                <p class="product-price">Prix : Variable selon options</p>
+                
+                <!-- Sélection du type de box -->
+                <label for="box-type">Type de Box :</label>
+                <select id="box-type" class="dropdown">
+                    <option value="gourmet">Box Gourmet</option>
+                    <option value="bio">Box Bio</option>
+                    <option value="surprise">Box Surprise</option>
+                </select>
+
+                <!-- Options à cocher -->
+                <fieldset class="options">
+                    <legend>Choisissez vos options :</legend>
+                    <div>
+                        <input type="checkbox" id="option1" value="Option 1">
+                        <label for="option1">Option 1 - Chocolat</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option2" value="Option 2">
+                        <label for="option2">Option 2 - Thé</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option3" value="Option 3">
+                        <label for="option3">Option 3 - Biscuits</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option4" value="Option 4">
+                        <label for="option4">Option 4 - Vin</label>
+                    </div>
+                </fieldset>
+                
+                <button id="download-button" class="btn primary-btn">Télécharger vos choix</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Laontiquaire. Tous droits réservés.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

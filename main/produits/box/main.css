@@ -116,3 +116,27 @@ body {
     font-size: 0.9rem;
     border-top: 1px solid #ddd;
 }
+
+/* Dropdown */
+.dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Options */
+.options {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.options div {
+    margin-bottom: 10px;
+}
+
+.options input {
+    margin-right: 10px;
+}
