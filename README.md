@@ -1,8 +1,5 @@
 # Roadmap
-## Refonte CSS =
- 1. Refonte du style de la page principal ✔
- 2. Refonte du style de la page de l'affichage des produits ✔
- 3. Refonte du style de la page d'achat des produits ✔
+1.Update de projet
 
 ### IDEE DE CONCEPTION
 
@@ -28,3 +25,7 @@
 10. Page affichage des produits ✔
 11. Acceder à la page du produit ✔
 12. Rendre plus propre ✔
+## Refonte CSS =
+ 1. Refonte du style de la page principal ✔
+ 2. Refonte du style de la page de l'affichage des produits ✔
+ 3. Refonte du style de la page d'achat des produits ✔
