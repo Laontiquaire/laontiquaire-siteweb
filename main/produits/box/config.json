@@ -1,0 +1,32 @@
+{
+    "boxTypes": [
+        {
+            "id": "scolaire",
+            "name": "Box Scolaire",
+            "price": 20,
+            "options": [
+                { "id": "sandwich", "name": "Miam", "price": 1000 },
+                { "id": "chewing-gum", "name": "Parfait pour la table", "price": 70 }
+            ]
+        },
+        {
+            "id": "bio",
+            "name": "Box Bio",
+            "price": 20,
+            "options": [
+                { "id": "the", "name": "Thé", "price": 3 },
+                { "id": "biscuits", "name": "Biscuits", "price": 4 }
+            ]
+        },
+        {
+            "id": "surprise",
+            "name": "Box Surprise",
+            "price": 10,
+            "options": [
+                { "id": "chocolat", "name": "Chocolat", "price": 5 },
+                { "id": "the", "name": "Thé", "price": 3 },
+                { "id": "biscuits", "name": "Biscuits", "price": 4 }
+            ]
+        }
+    ]
+}

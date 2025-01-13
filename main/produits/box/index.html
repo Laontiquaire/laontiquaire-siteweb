@@ -21,44 +21,31 @@
                 <p class="product-description">
                     Personnalisez votre box avec les options de votre choix !
                 </p>
-                <p class="product-price">Prix : Variable selon options</p>
+                <p id="product-price" class="product-price">Prix : 0 €</p>
                 
                 <!-- Sélection du type de box -->
                 <label for="box-type">Type de Box :</label>
-                <select id="box-type" class="dropdown">
-                    <option value="gourmet">Box Gourmet</option>
-                    <option value="bio">Box Bio</option>
-                    <option value="surprise">Box Surprise</option>
-                </select>
+                <select id="box-type" class="dropdown"></select>
 
                 <!-- Options à cocher -->
                 <fieldset class="options">
                     <legend>Choisissez vos options :</legend>
-                    <div>
-                        <input type="checkbox" id="option1" value="Option 1">
-                        <label for="option1">Option 1 - Chocolat</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="option2" value="Option 2">
-                        <label for="option2">Option 2 - Thé</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="option3" value="Option 3">
-                        <label for="option3">Option 3 - Biscuits</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="option4" value="Option 4">
-                        <label for="option4">Option 4 - Vin</label>
-                    </div>
+                    <div id="options-container"></div>
                 </fieldset>
                 
-                <button id="download-button" class="btn primary-btn">Télécharger vos choix</button>
+                <!-- Boutons -->
+                <div class="actions">
+                    <button id="download-button" class="btn primary-btn">Télécharger vos choix</button>
+                    <label for="file-import" class="btn primary-btn">Importer une liste</label>
+                    <input type="file" id="file-import" accept=".txt" hidden>
+                </div>
             </div>
         </div>
     </main>
     <footer class="footer">
         <p>© 2024 Laontiquaire. Tous droits réservés.</p>
     </footer>
+    <script src="config.json"></script>
     <script src="main.js"></script>
 </body>
 </html>

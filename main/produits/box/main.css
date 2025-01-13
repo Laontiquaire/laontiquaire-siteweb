@@ -140,3 +140,127 @@ body {
 .options input {
     margin-right: 10px;
 }
+
+/* Actions */
+.actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.actions label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Modernisation du dropdown */
+.dropdown {
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #4a90e2;
+    color: #4a90e2;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    margin-bottom: 20px; /* Espacement avec les autres éléments */
+}
+
+.dropdown:hover {
+    border-color: #357ab7; /* Bordure plus sombre au survol */
+    background-color: #f4f4f9; /* Fond légèrement gris au survol */
+}
+
+.dropdown:focus {
+    outline: none;
+    border-color: #2b6aa3; /* Couleur au focus */
+}
+
+/* Ajouter un indicateur de flèche */
+.dropdown::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    pointer-events: none;
+}
+
+/* Modernisation des checkboxes */
+.options div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Ajout d'espacement entre chaque option */
+}
+
+input[type="checkbox"] {
+    appearance: none; /* Supprime l'apparence native */
+    width: 24px; /* Taille plus grande pour une meilleure visibilité */
+    height: 24px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px; /* Carré légèrement arrondi */
+    cursor: pointer;
+    margin-right: 15px; /* Espace entre la checkbox et le texte */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: relative; /* Nécessaire pour la coche */
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4a90e2; /* Fond bleu pour une option cochée */
+    border-color: #357ab7; /* Couleur de bordure plus sombre */
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: #fff; /* Coche blanche pour une meilleure lisibilité */
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 0; /* Centrage vertical */
+    left: 6px; /* Centrage horizontal */
+    line-height: 24px; /* Centrage par ligne */
+    text-align: center;
+    width: 24px;
+    height: 24px;
+}
+
+label {
+    font-size: 1rem;
+    color: #333; /* Texte par défaut */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:hover + label {
+    color: #4a90e2; /* Couleur au survol */
+}
+
+
+/* Style des labels associés */
+label {
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+input[type="checkbox"]:hover + label {
+    color: #4a90e2;
+}
+
+/* Conteneur des options */
+.options {
+    display: flex;
+    flex-direction: column; /* Les options sont empilées verticalement */
+    align-items: flex-start; /* Aligne le texte des options à gauche */
+    margin-top: 20px;
+}
+
+/* Conteneur général */
+.container {
+    display: flex;
+    flex-direction: column; /* Aligne tout verticalement */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+}
