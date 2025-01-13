@@ -9,8 +9,6 @@
  
  2.Logo Officiel
 
- 3.Page Evenement
-
 # Terminé
 ## Création de la base du site web: ✔
 1. Structure des dossiers: ✔
@@ -25,7 +23,7 @@
 10. Page affichage des produits ✔
 11. Acceder à la page du produit ✔
 12. Rendre plus propre ✔
-## Refonte CSS =
+## Refonte CSS 
  1. Refonte du style de la page principal ✔
  2. Refonte du style de la page de l'affichage des produits ✔
  3. Refonte du style de la page d'achat des produits ✔
