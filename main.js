@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 10005;
 
 // Définition du répertoire contenant les fichiers statiques
 app.use(express.static('main'));
@@ -14,6 +14,6 @@ app.get('/', (req, res) => {
 
 // Démarrer le serveur
 app.listen(port, () => {
-    console.log('Site web démarré sur https://laontiquaire.raphhosting.com.com');
+    console.log('Site web démarré sur https://laontiquaire.raphhosting.com');
     console.log('Port: ${port}');
 });
