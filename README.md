@@ -6,8 +6,6 @@
 ## Structure concept
  1.Icon Produit
  
- 2.Logo Officiel
-
 # Terminé
 ## Création de la base du site web: ✔
 1. Structure des dossiers: ✔
@@ -23,6 +21,7 @@
 11. Acceder à la page du produit ✔
 12. Rendre plus propre ✔
 13. Update de projet ✔
+14. Logo Officiel ✔
 ## Refonte CSS 
  1. Refonte du style de la page principal ✔
  2. Refonte du style de la page de l'affichage des produits ✔
