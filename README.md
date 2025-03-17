@@ -5,7 +5,7 @@
 # To Do
 | Catégorie    | Tache         | Statut      | Terminé |
 |--------------|---------------|-------------|---------|
-| Esthétique   | Icone Produit | En attente  | - [X]   |
+| Esthétique   | Icone Produit | En attente  | [X]     |
 
 - [ ] [1] Icon Produit
  
