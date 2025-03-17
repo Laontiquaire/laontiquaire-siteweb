@@ -4,25 +4,25 @@
 
 # Impossible (pour le moment)
 ## Structure concept
- 1.Icon Produit
+ 1.Icon Produit [ ]
  
 # Terminé
-## Création de la base du site web: ✔
-1. Structure des dossiers: ✔
-2. Runner NodeJS: ✔
-3. Création fichier index.html: ✔
-4. Structure des css / html / js: ✔
-5. Main page: La présentation de l'entreprise✔
-6. Le logo (favicon) et sur la page main ✔
-7. Contacter ✔
-8. Lien sociaux ✔
-9. Notre engagement ✔
-10. Page affichage des produits ✔
-11. Acceder à la page du produit ✔
-12. Rendre plus propre ✔
-13. Update de projet ✔
-14. Logo Officiel ✔
+## Création de la base du site web: 
+1. Structure des dossiers: [x]
+2. Runner NodeJS: [x]
+3. Création fichier index.html: [x]
+4. Structure des css / html / js: [x]
+5. Main page: La présentation de l'entreprise [x]
+6. Le logo (favicon) et sur la page main [x]
+7. Contacter [x]
+8. Lien sociaux [x]
+9. Notre engagement [x]
+10. Page affichage des produits [x]
+11. Acceder à la page du produit [x]
+12. Rendre plus propre [x]
+13. Update de projet [x]
+14. Logo Officiel [x]
 ## Refonte CSS 
- 1. Refonte du style de la page principal ✔
- 2. Refonte du style de la page de l'affichage des produits ✔
- 3. Refonte du style de la page d'achat des produits ✔
+ 1. Refonte du style de la page principal [x]
+ 2. Refonte du style de la page de l'affichage des produits [x]
+ 3. Refonte du style de la page d'achat des produits [x]
