@@ -5,10 +5,10 @@
 # To Do
 | Catégorie    | Tache         | Priorité (classement)    | Statut      | Assigné à |
 |--------------|---------------|--------------------------|-------------|-----------|
-| Esthétique   | Icone Produit |      1                   | En attente  |   All     |
+| Esthétique   | Icone Produit |      1                   | En cours    |   All     |
 
  
-# Terminé
+# All
 ## Création de la base du site web:
 - [X] Structure des dossiers
 - [X] Runner NodeJS
@@ -27,4 +27,5 @@
 ## Refonte CSS 
 - [X] Refonte du style de la page principal
 - [X] Refonte du style de la page de l'affichage des produits
-- [X] Refonte du style de la page d'achat des produits 
+- [X] Refonte du style de la page d'achat des produits
+- [ ] Icone produit
