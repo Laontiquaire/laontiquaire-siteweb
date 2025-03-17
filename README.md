@@ -5,7 +5,7 @@
 # To Do
 | Catégorie    | Tache         | Priorité (classement)    | Statut      | Assigné à |
 |--------------|---------------|--------------------------|-------------|-----------|
-| N/A   | N/A |      N/A                   | N/A    |   N/A     |
+| N/A   | N/A |      N/A       | N/A                      |   N/A       |     N/A   |
 
  
 # All
