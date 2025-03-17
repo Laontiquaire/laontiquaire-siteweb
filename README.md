@@ -3,9 +3,9 @@
 ### IDEE DE CONCEPTION
 
 # To Do
-| Catégorie    | Tache         | Statut      | Terminé |
-|--------------|---------------|-------------|---------|
-| Esthétique   | Icone Produit | En attente  | [X]     |
+| Catégorie    | Tache         | Statut      | Assigné à |
+|--------------|---------------|-------------|-----------|
+| Esthétique   | Icone Produit | En attente  |  All      |
 
 - [ ] [1] Icon Produit
  
