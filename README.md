@@ -8,7 +8,7 @@
  
 # Terminé
 ## Création de la base du site web: 
-1. Structure des dossiers: [x]
+1. Structure des dossiers: [X]
 2. Runner NodeJS: [x]
 3. Création fichier index.html: [x]
 4. Structure des css / html / js: [x]
