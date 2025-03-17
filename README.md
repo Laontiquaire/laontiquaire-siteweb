@@ -5,7 +5,7 @@
 # To Do
 | Catégorie    | Tache         | Priorité (classement)    | Statut      | Assigné à |
 |--------------|---------------|--------------------------|-------------|-----------|
-| Esthétique   | Icone Produit |      1                   | En cours    |   All     |
+| N/A   | N/A |      N/A                   | N/A    |   N/A     |
 
  
 # All
@@ -28,4 +28,4 @@
 - [X] Refonte du style de la page principal
 - [X] Refonte du style de la page de l'affichage des produits
 - [X] Refonte du style de la page d'achat des produits
-- [ ] Icone produit
+- [X] Icone produit
