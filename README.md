@@ -3,11 +3,10 @@
 ### IDEE DE CONCEPTION
 
 # To Do
-| Catégorie    | Tache         | Statut      | Assigné à |
-|--------------|---------------|-------------|-----------|
-| Esthétique   | Icone Produit | En attente  |  All      |
+| Catégorie    | Tache         | Priorité     | Statut      | Assigné à |
+|--------------|---------------|--------------|-------------|-----------|
+| Esthétique   | Icone Produit |      1       |  En attente |   Al      |
 
-- [ ] [1] Icon Produit
  
 # Terminé
 ## Création de la base du site web:
