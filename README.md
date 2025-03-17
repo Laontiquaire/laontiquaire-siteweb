@@ -4,7 +4,7 @@
 
 # Impossible (pour le moment)
 ## Structure concept
-[ ] [1] Icon Produit
+- [ ] [1] Icon Produit
  
 # Terminé
 ## Création de la base du site web:
