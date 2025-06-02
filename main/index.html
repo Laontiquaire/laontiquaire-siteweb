@@ -47,21 +47,7 @@
             animation: bounce-arrow 1.5s infinite;
         }
 
-        /* Styles pour la modale */
-        .modal {
-            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-        }
-        .modal.hidden {
-            opacity: 0;
-            transform: scale(0.95);
-            pointer-events: none;
-        }
-        .modal-content {
-            transition: transform 0.3s ease-out;
-        }
-        .modal.hidden .modal-content {
-             transform: translateY(-20px);
-        }
+        /* Styles pour la modale SUPPRIMÉS */
 
     </style>
     <script>
@@ -137,7 +123,7 @@
                 </section>
             </a>
 
-            <a href="#" data-link="/contact/liens-sociaux" class="section-link group block section-card social-media-link">
+            <a href="/contact/liens-sociaux" class="section-link group block section-card">
                 <section class="liens-sociaux bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 overflow-hidden h-full flex flex-col">
                     <div class="p-8 flex-grow">
                         <div class="flex items-center text-primary mb-4">
@@ -186,86 +172,24 @@
         </div>
     </footer>
 
-    <div id="externalLinkModal" class="modal hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-[100]">
-        <div class="modal-content bg-white p-6 sm:p-8 rounded-lg shadow-2xl max-w-md w-full text-center transform transition-transform duration-300">
-            <div class="flex justify-center mb-4">
-                <i data-lucide="alert-triangle" class="w-16 h-16 text-accent"></i>
-            </div>
-            <h3 class="text-xl sm:text-2xl font-semibold mb-3 text-gray-800">Redirection Externe</h3>
-            <p class="text-gray-600 mb-6">Vous êtes sur le point de quitter notre site pour visiter un lien externe. Voulez-vous continuer ?</p>
-            <div class="flex justify-center space-x-4">
-                <button id="cancelRedirect" class="px-6 py-2.5 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium">
-                    Annuler
-                </button>
-                <a id="confirmRedirect" href="#" target="_blank" class="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors font-medium">
-                    Continuer
-                </a>
-            </div>
-        </div>
-    </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Initialisation des icônes Lucide
             if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
                 lucide.createIcons();
             } else {
-                // This console.error might still appear if the script execution order is tricky,
-                // but defer should make it much less likely.
-                // If it persists, it means lucide script hasn't finished executing and populating the global `lucide` object
-                // by the time DOMContentLoaded fires.
                 console.error("Lucide library not loaded or createIcons function not available when DOMContentLoaded fired. Check script loading order and `defer` attribute.");
             }
 
             // Animation d'apparition pour chaque section
             const sections = document.querySelectorAll(".section-card");
             sections.forEach((section, index) => {
-                // Délai progressif pour l'animation
                 setTimeout(() => {
                     section.classList.add("visible");
                 }, 150 * index);
             });
 
-            // Gestion de la modale pour les liens sociaux
-            const socialMediaLinks = document.querySelectorAll(".social-media-link");
-            const modal = document.getElementById("externalLinkModal");
-            const confirmButton = document.getElementById("confirmRedirect");
-            const cancelButton = document.getElementById("cancelRedirect");
-            let targetUrl = '';
-
-            socialMediaLinks.forEach(link => {
-                link.addEventListener("click", (e) => {
-                    e.preventDefault(); // Empêche la navigation immédiate
-                    targetUrl = link.dataset.link; // Récupère l'URL depuis data-link
-                    if (targetUrl) {
-                        confirmButton.href = targetUrl;
-                        modal.classList.remove("hidden");
-                        // Force reflow for transition
-                        void modal.offsetWidth;
-                        modal.classList.remove("opacity-0", "scale-95");
-                        modal.querySelector('.modal-content').classList.remove('translate-y-[-20px]');
-                    } else {
-                        console.error("Aucune URL cible définie pour ce lien social.");
-                    }
-                });
-            });
-
-            function closeModal() {
-                modal.classList.add("opacity-0", "scale-95");
-                modal.querySelector('.modal-content').classList.add('translate-y-[-20px]');
-                setTimeout(() => {
-                     modal.classList.add("hidden");
-                }, 300); // Durée de la transition
-            }
-
-            cancelButton.addEventListener("click", closeModal);
-
-            // Fermer la modale si on clique en dehors
-            modal.addEventListener("click", (e) => {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
+            // Gestion de la modale SUPPRIMÉE
 
             // Mettre à jour l'année dans le pied de page
             document.getElementById("currentYear").textContent = new Date().getFullYear();
