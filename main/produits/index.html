@@ -1,50 +1,213 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produits - Laontiquaire</title>
-  <link rel="stylesheet" href="catalog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - Laontiquaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@latest/dist/lucide.min.js" defer></script>
+    <style>
+        /* Police personnalisée (cohérence avec la page d'accueil) */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Animation d'apparition globale de la page */
+            animation: fadeInPage 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animation d'apparition initiale des cartes produits */
+        .product-card-item {
+            opacity: 0;
+            transform: translateY(25px) scale(0.97);
+            /* Transition pour l'opacité, la transformation et l'ombre */
+            transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.3s ease-in-out;
+        }
+
+        .product-card-item.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Style pour l'overlay d'information du produit sur l'image */
+        .product-image-overlay .info-content {
+            transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+        }
+        
+        /* Assurer que le conteneur de l'image prend toute la hauteur nécessaire */
+        .product-image-container {
+            height: 240px; /* Hauteur fixe pour les images, sm:h-64 md:h-72 */
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .product-image-container {
+                height: 256px; 
+            }
+        }
+         @media (min-width: 768px) { /* md breakpoint */
+            .product-image-container {
+                height: 288px;
+            }
+        }
+
+
+    </style>
+    <script>
+        // Configuration de Tailwind (cohérence avec la page d'accueil)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',      // Bleu original
+                        'primary-dark': '#357ABD', // Bleu plus foncé
+                        accent: '#F5A623',       // Couleur d'accentuation (utilisée pour le bouton retour)
+                        'accent-dark': '#D48F1B',  // Accent plus foncé pour hover
+                        lightbg: '#F7FAFC',     // Fond légèrement grisé
+                        cardbg: '#FFFFFF',       // Fond des cartes
+                        textdark: '#334155',    // Texte principal plus sombre
+                        textlight: '#64748B',   // Texte secondaire
+                    },
+                    animation: {
+                        // Si besoin d'animations spécifiques réutilisables
+                    },
+                    transitionTimingFunction: {
+                        'custom-ease': 'cubic-bezier(0.16, 1, 0.3, 1)',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  <!-- En-tête -->
-  <header>
-    <img src="/logo/logo.png" alt="Logo Laontiquaire">
-    <h1>Laontiquaire</h1>
-  </header>
+<body class="bg-lightbg text-textdark antialiased">
 
-  <!-- Liste des produits -->
-  <main>
-    <div class="product-list">
-      <!-- Produit 1 (jeux de société) -->
-      <div class="product">
-        <a href="/produits/jds">
-          <img src="/logo/logojds.png" alt="Jeux de société">
-          <div class="product-info">
-            <p class="product-title">Jeux de Société</p>
-            <p class="product-description">Amusez-vous avec nos jeux de société pour tous les âges...</p>
-          </div>
-        </a>
-      </div>
+    <header class="bg-gradient-to-r from-primary to-primary-dark text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-90 transition-opacity">
+                <img src="/logo/logo.png" alt="Logo Laontiquaire" class="h-9 w-auto sm:h-11 rounded-full border-2 border-white">
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Laontiquaire</h1>
+            </a>
+            </div>
+    </header>
 
-      <!-- Produit 2 (Livre) -->
-      <div class="product">
-        <a href="/produits/adm">
-          <img src="/logo/logoadm.png" alt="Livre">
-          <div class="product-info">
-            <p class="product-title">L'atelier des mots</p>
-            <p class="product-description">Vente de livre Crée par nous</p>
-          </div>
+    <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div class="text-center mb-10 sm:mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold text-textdark">Nos Créations Uniques</h2>
+            <p class="mt-2 text-lg text-textlight">Explorez notre sélection de jeux et livres faits avec passion.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+            
+            <div class="product-card-item bg-cardbg rounded-xl shadow-lg overflow-hidden flex flex-col group">
+                <a href="/produits/jds" class="block h-full flex flex-col">
+                    <div class="relative product-image-container">
+                        <img src="/logo/logojds.png" alt="Jeux de société Laontiquaire" class="w-full h-full object-cover transition-transform duration-300 ease-custom-ease group-hover:scale-105">
+                        <div class="product-image-overlay absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex items-end p-4">
+                            <div class="info-content text-white opacity-0 transform translate-y-3 group-hover:opacity-100 group-hover:translate-y-0">
+                                <h3 class="text-lg font-semibold">Jeux de Société Originaux</h3>
+                                <p class="text-sm text-gray-200">Divertissement garanti pour tous.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-primary group-hover:text-primary-dark transition-colors duration-200">Nos Jeux de Société</h3>
+                            <p class="text-textlight mt-2 text-sm leading-relaxed line-clamp-3">Amusez-vous avec nos jeux de société innovants et stimulants, parfaits pour des moments conviviaux en famille ou entre amis.</p>
+                        </div>
+                        <span class="inline-flex items-center mt-4 text-sm font-medium text-primary-dark group-hover:underline">
+                            Découvrir les jeux
+                            <i data-lucide="arrow-right" class="ml-1.5 h-4 w-4"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-card-item bg-cardbg rounded-xl shadow-lg overflow-hidden flex flex-col group">
+                 <a href="/produits/adm" class="block h-full flex flex-col">
+                    <div class="relative product-image-container">
+                        <img src="/logo/logoadm.png" alt="Livre L'atelier des mots" class="w-full h-full object-cover transition-transform duration-300 ease-custom-ease group-hover:scale-105">
+                        <div class="product-image-overlay absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex items-end p-4">
+                            <div class="info-content text-white opacity-0 transform translate-y-3 group-hover:opacity-100 group-hover:translate-y-0">
+                                <h3 class="text-lg font-semibold">L'Atelier des Mots</h3>
+                                <p class="text-sm text-gray-200">Une évasion littéraire.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-primary group-hover:text-primary-dark transition-colors duration-200">L'Atelier des Mots</h3>
+                            <p class="text-textlight mt-2 text-sm leading-relaxed line-clamp-3">Vente de ce livre unique, écrit avec soin et passion par notre équipe créative. Une histoire à ne pas manquer.</p>
+                        </div>
+                         <span class="inline-flex items-center mt-4 text-sm font-medium text-primary-dark group-hover:underline">
+                            Lire un extrait
+                            <i data-lucide="arrow-right" class="ml-1.5 h-4 w-4"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+            </div>
+    </main>
+
+    <div class="text-center my-10 sm:my-16">
+        <a href="/" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-3.5 bg-gradient-to-r from-accent to-orange-500 text-white text-base sm:text-lg font-semibold rounded-lg shadow-md hover:from-accent-dark hover:to-accent transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+            <i data-lucide="home" class="mr-2 sm:mr-2.5 h-5 w-5"></i>
+            Retourner à l'accueil
         </a>
-      </div>
     </div>
-  </main>
 
-  <!-- Bouton de retour -->
-  <div class="button-container">
-    <a href="/" class="home-button">Retourner à l'accueil</a>
-  </div>
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="currentYear"></span> Laontiquaire. Tous droits réservés.</p>
+            <p class="text-sm mt-1">Conçu avec <i data-lucide="heart" class="inline-block w-4 h-4 text-red-500 fill-current"></i> et passion.</p>
+        </div>
+    </footer>
 
-  <script src="catalog.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialisation des icônes Lucide
+            // Il est crucial que le script Lucide (avec defer) ait eu le temps de s'exécuter.
+            // Si lucide n'est pas défini, c'est que le script n'a pas chargé ou exécuté à temps.
+            if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+                try {
+                    lucide.createIcons();
+                } catch (error) {
+                    console.error("Erreur lors de l'initialisation de Lucide:", error);
+                }
+            } else {
+                // Tenter une initialisation différée si lucide n'est pas prêt immédiatement
+                // Ceci est une solution de contournement, `defer` devrait normalement suffire.
+                setTimeout(() => {
+                    if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+                        try {
+                            lucide.createIcons();
+                        } catch (error) {
+                            console.error("Erreur lors de la tentative différée d'initialisation de Lucide:", error);
+                        }
+                    } else {
+                        console.error("Lucide library n'est toujours pas disponible après un délai.");
+                    }
+                }, 500); // Attendre 500ms
+            }
+
+            // Animation d'apparition pour chaque carte produit
+            const productCards = document.querySelectorAll(".product-card-item");
+            productCards.forEach((card, index) => {
+                // Délai progressif pour l'animation
+                setTimeout(() => {
+                    card.classList.add("visible");
+                }, 100 + (150 * index)); // petit délai initial + délai progressif
+            });
+
+            // Mettre à jour l'année dans le pied de page
+            const currentYearElement = document.getElementById("currentYear");
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
 </body>
 </html>

@@ -3,50 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atelier des Mots - Laontiquaire</title>
-    <link rel="stylesheet" href="main.css">
+    <title>L'Atelier des Mots - Laontiquaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@latest/dist/lucide.min.js" defer></script>
+    <style>
+        /* Police personnalisée (cohérence avec les autres pages) */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Animation d'apparition globale de la page */
+            animation: fadeInPage 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animation d'apparition pour les éléments de la collection */
+        .collection-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .collection-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .image-detail {
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-detail:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+    <script>
+        // Configuration de Tailwind (cohérence avec les autres pages)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',      // Bleu original
+                        'primary-dark': '#357ABD', // Bleu plus foncé
+                        accent: '#F5A623',       // Couleur d'accentuation
+                        'accent-dark': '#D48F1B',
+                        lightbg: '#F7FAFC',     // Fond légèrement grisé
+                        cardbg: '#FFFFFF',       // Fond des cartes
+                        textdark: '#334155',    // Texte principal plus sombre
+                        textlight: '#64748B',   // Texte secondaire
+                    },
+                    transitionTimingFunction: {
+                        'custom-ease': 'cubic-bezier(0.16, 1, 0.3, 1)',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header class="header">
-        <a href="/logo/capybara.jpg">
-            <img src="/logo/logo.png" style="width: 50px; height: 50px;">
-        </a>        
-</button>
-        <nav>
-            <button id="back-home-button" class="nav-btn">Accueil</button>
-        </nav>
+<body class="bg-lightbg text-textdark antialiased">
+
+    <header class="bg-gradient-to-r from-primary to-primary-dark text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-90 transition-opacity">
+                <img src="/logo/logo.png" alt="Logo Laontiquaire" class="h-9 w-auto sm:h-11 border-2 border-white rounded-full">
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Laontiquaire</h1>
+            </a>
+            <nav>
+                <a href="/" id="back-home-button" class="nav-btn bg-white text-primary hover:bg-gray-100 py-2 px-4 rounded-md text-sm sm:text-base font-medium transition-colors">
+                    Accueil
+                </a>
+            </nav>
+        </div>
     </header>
-    <main class="container">
-        <div class="product-card">
-            <img src="/logo/logoadm.png" alt="Image du produit" class="product-image">
-            <div class="product-info">
-                <h1>Livre</h1>
-                <p class="product-description">
-                    Vente de livre pour enfant conçu par Laontiquaire.
-                </p>
-                <p class="product-price">Prix : 4€</p>
-                <p class="">Couverture de l'un de nos livres intitulé: Les Aventures d'Alex</p>
-                <img src="/logo/couvlivre1.png" alt="Image du produit" class="image-demo">
-                <div class="product-info">
-                    <p class="product-price">Prix : 3€</p>
-                <p class="">Couverture de l'un de nos livres intitulé: Crois en tes reves </p>
-                <img src="/logo/LIVRE2.png" alt="Image du produit" class="image-demo">
-                <div class="product-info">
-                <h1>BD</h1>
-                <p class="product-description">
-                    Vente de BD pour enfant conçu par Laontiquaire.
-                <p>Couverture de la BD intitulé : Mini trio en action</p>
-                <img src="/logo/couverture.png" alt="Couverture de la BD Mini Trio En Action" class="image-demo">
-                    <p class="product-description">
-                    Vente de BD pour enfant conçu par Laontiquaire.
-                <p>Couverture de la BD intitulé : Mia se presente </p>
-                <img src="/logo/bd2.png" alt="Couverture de la BD Mia se presente" class="image-demo">
+
+    <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        
+        <div class="bg-cardbg p-6 sm:p-8 rounded-xl shadow-xl">
+            <div class="text-center mb-8">
+                <img src="/logo/logoadm.png" alt="L'Atelier des Mots" class="w-full max-w-xs sm:max-w-sm mx-auto mb-6 rounded-lg shadow-md image-detail">
+                <h2 class="text-3xl sm:text-4xl font-bold text-primary mb-2">L'Atelier des Mots</h2>
+                <p class="text-lg text-textlight">Notre collection de livres et bandes dessinées pour enfants, conçus avec soin par Laontiquaire.</p>
             </div>
+
+            <section class="mb-12 collection-item">
+                <h3 class="text-2xl sm:text-3xl font-semibold text-textdark border-b-2 border-primary pb-2 mb-6 flex items-center">
+                    <i data-lucide="book-open" class="w-7 h-7 mr-3 text-primary"></i>
+                    Nos Livres
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <div class="bg-lightbg p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="/logo/couvlivre1.png" alt="Couverture Les Aventures d'Alex" class="w-full h-auto max-h-80 object-contain mx-auto mb-4 rounded image-detail">
+                        <h4 class="text-xl font-semibold text-primary-dark mb-1">Les Aventures d'Alex</h4>
+                        <p class="text-sm text-textlight mb-2">Une histoire palpitante pour jeunes lecteurs.</p>
+                        <p class="text-lg font-bold text-accent">Prix : 4€</p>
+                    </div>
+
+                    <div class="bg-lightbg p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="/logo/LIVRE2.png" alt="Couverture Crois en tes rêves" class="w-full h-auto max-h-80 object-contain mx-auto mb-4 rounded image-detail">
+                        <h4 class="text-xl font-semibold text-primary-dark mb-1">Crois en tes Rêves</h4>
+                        <p class="text-sm text-textlight mb-2">Un conte inspirant sur la persévérance.</p>
+                        <p class="text-lg font-bold text-accent">Prix : 2€</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="collection-item">
+                <h3 class="text-2xl sm:text-3xl font-semibold text-textdark border-b-2 border-primary pb-2 mb-6 flex items-center">
+                    <i data-lucide="comic" class="w-7 h-7 mr-3 text-primary"></i>
+                    Nos Bandes Dessinées
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <div class="bg-lightbg p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="/logo/couverture.png" alt="Couverture Mini Trio En Action" class="w-full h-auto max-h-80 object-contain mx-auto mb-4 rounded image-detail">
+                        <h4 class="text-xl font-semibold text-primary-dark mb-1">Mini Trio en Action</h4>
+                        <p class="text-sm text-textlight mb-2">Les premières aventures de nos jeunes héros.</p>
+                        <p class="text-lg font-bold text-accent">Prix : 4€</p>
+                    </div>
+
+                    <div class="bg-lightbg p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <img src="/logo/bd2.png" alt="Couverture Mia se présente" class="w-full h-auto max-h-80 object-contain mx-auto mb-4 rounded image-detail">
+                        <h4 class="text-xl font-semibold text-primary-dark mb-1">Mia se Présente</h4>
+                        <p class="text-sm text-textlight mb-2">Découvrez Mia, un personnage attachant.</p>
+                        <p class="text-lg font-bold text-accent">Prix : 3€</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
-    <footer class="footer">
-        <p>© 2024 Laontiquaire. Tous droits réservés.</p>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="currentYear"></span> Laontiquaire. Tous droits réservés.</p>
+            <p class="text-sm mt-1">Conçu avec <i data-lucide="heart" class="inline-block w-4 h-4 text-red-500 fill-current"></i> et passion.</p>
+        </div>
     </footer>
-    <script src="main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialisation des icônes Lucide
+            if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+                try {
+                    lucide.createIcons();
+                } catch (error) {
+                    console.error("Erreur lors de l'initialisation de Lucide:", error);
+                }
+            } else {
+                setTimeout(() => {
+                    if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+                        try {
+                            lucide.createIcons();
+                        } catch (error) {
+                            console.error("Erreur lors de la tentative différée d'initialisation de Lucide:", error);
+                        }
+                    } else {
+                        console.error("Lucide library n'est toujours pas disponible après un délai.");
+                    }
+                }, 500);
+            }
+
+            // Animation d'apparition pour les sections de la collection
+            const collectionItems = document.querySelectorAll(".collection-item");
+            collectionItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add("visible");
+                }, 200 + (200 * index)); // Délai progressif
+            });
+
+            // Mettre à jour l'année dans le pied de page
+            const currentYearElement = document.getElementById("currentYear");
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+
+            // Le bouton "Accueil" dans le header est maintenant un lien <a>,
+            // donc le script pour la redirection n'est plus nécessaire.
+            // Si vous préférez un <button> avec JS, vous pouvez réactiver le script original:
+            // const backHomeButton = document.getElementById('back-home-button');
+            // if (backHomeButton) {
+            //     backHomeButton.addEventListener('click', function () {
+            //         window.location.href = "/"; // ou "/produits/" si c'est la page catalogue
+            //     });
+            // }
+        });
+    </script>
 </body>
 </html>
