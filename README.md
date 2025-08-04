@@ -6,3 +6,5 @@ Le shutdown a eu lieu car l'année de troisième (2024-2025) est terminé.
 
 ### Crédits:
 Anciens dévelopeurs : @raph_rapide100 @darkson0200
+
+## PAS MAINTENUE / NOT MAINTENED
