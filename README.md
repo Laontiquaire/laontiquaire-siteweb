@@ -5,4 +5,4 @@ Laontiquaire était une minie entreprise situé au collège-lycée La Providence
 Le shutdown a eu lieu car l'année de troisième (2024-2025) est terminé.
 
 ### Crédits:
-Anciens dévelopeurs : @raph_rapide1000 @darkson0200
+Anciens dévelopeurs : @raph_rapide100 @darkson0200
