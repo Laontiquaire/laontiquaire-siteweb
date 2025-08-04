@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Laon'croyable Aventure - Laontiquaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@latest/dist/lucide.min.js" defer></script>
+    <style>
+        /* Police personnalisée (cohérence avec les autres pages) */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Animation d'apparition globale de la page */
+            animation: fadeInPage 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInPage {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animation d'apparition pour la section produit */
+        .product-detail-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s; /* Ajout d'un délai */
+        }
+        .product-detail-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .product-main-image {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .product-main-image:hover {
+            transform: scale(1.03);
+        }
+
+    </style>
+    <script>
+        // Configuration de Tailwind (cohérence avec les autres pages)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2',      // Bleu original
+                        'primary-dark': '#357ABD', // Bleu plus foncé
+                        accent: '#F5A623',       // Couleur d'accentuation
+                        'accent-dark': '#D48F1B',
+                        lightbg: '#F7FAFC',     // Fond légèrement grisé
+                        cardbg: '#FFFFFF',       // Fond des cartes/sections
+                        textdark: '#334155',    // Texte principal plus sombre
+                        textlight: '#64748B',   // Texte secondaire
+                    },
+                    transitionTimingFunction: {
+                        'custom-ease': 'cubic-bezier(0.16, 1, 0.3, 1)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-lightbg text-textdark antialiased">
+
+    <header class="bg-gradient-to-r from-primary to-primary-dark text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <a href="/logo/capybara-hecker.jpg" class="flex items-center space-x-2 sm:space-x-3 hover:opacity-90 transition-opacity">
+                <img src="/logo/logo.png" alt="Logo Laontiquaire" class="h-9 w-auto sm:h-11 border-2 border-white rounded-full">
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">Laontiquaire</h1>
+            </a>
+            <nav>
+                <a href="/preview" class="nav-btn bg-white text-primary hover:bg-gray-100 py-2 px-4 rounded-md text-sm sm:text-base font-medium transition-colors">
+                    Accueil
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        
+        <div class="bg-cardbg p-6 sm:p-8 md:p-10 rounded-xl shadow-xl product-detail-section">
+            <div class="md:flex md:space-x-8 lg:space-x-12">
+                <div class="md:w-2/5 mb-6 md:mb-0">
+                    <img src="/logo/logojds.png" alt="Jeu Laon'croyable Aventure" class="w-full h-auto object-cover rounded-lg shadow-lg product-main-image">
+                    </div>
+
+                <div class="md:w-3/5">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary mb-2">Laon'croyable Aventure</h2>
+                    <p class="text-lg text-textlight mb-4 sm:mb-6">Le jeu de société pour explorer Laon en s'amusant !</p>
+                    
+                    <div class="prose prose-sm sm:prose-base text-textlight max-w-none leading-relaxed mb-6">
+                        <p>
+                            Nous voulons faire en sorte que les enfants apprennent tout en s’amusant grâce à notre jeu « Laon’croyable aventure ». 
+                            Parcourez les rues de Laon, découvrez ses secrets et apprenez son histoire de manière ludique et interactive ! 
+                            Une expérience unique pour toute la famille.
+                        </p>
+                        <h4 class="text-md font-semibold text-textdark mt-4 mb-1">Points forts :</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Apprentissage ludique de l'histoire de Laon.</li>
+                            <li>Stimule la curiosité et l'observation.</li>
+                            <li>Idéal pour des moments de partage en famille.</li>
+                            <li>Conçu et fabriqué avec soin par Laontiquaire.</li>
+                        </ul>
+                    </div>
+
+                    <p class="text-3xl sm:text-4xl font-bold text-accent mb-6 sm:mb-8">Prix : 24,90€</p>
+
+                    <button id="buy-button" class="w-full sm:w-auto flex items-center justify-center bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        <i data-lucide="shopping-cart" class="w-5 h-5 mr-2.5"></i>
+                        Acheter maintenant
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3 text-center sm:text-left">Préparez-vous pour une aventure inoubliable !</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="currentYear"></span> Laontiquaire. Tous droits réservés.</p>
+            <p class="text-sm mt-1">Conçu avec <i data-lucide="heart" class="inline-block w-4 h-4 text-red-500 fill-current"></i> et passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialisation des icônes Lucide
+            if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+                try {
+                    lucide.createIcons();
+                } catch (error) {
+                    console.error("Erreur lors de l'initialisation de Lucide:", error);
+                }
+            } else {
+                setTimeout(() => {
+                    if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+                        try {
+                            lucide.createIcons();
+                        } catch (error) {
+                            console.error("Erreur lors de la tentative différée d'initialisation de Lucide:", error);
+                        }
+                    } else {
+                        console.error("Lucide library n'est toujours pas disponible après un délai.");
+                    }
+                }, 500);
+            }
+
+            // Animation d'apparition pour la section de détail produit
+            const productDetailSection = document.querySelector(".product-detail-section");
+            if(productDetailSection) {
+                void productDetailSection.offsetWidth; // Force reflow
+                productDetailSection.classList.add("visible");
+            }
+
+            // Mettre à jour l'année dans le pied de page
+            const currentYearElement = document.getElementById("currentYear");
+            if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+
+            // Gestion du bouton "Acheter maintenant" (exemple)
+            const buyButton = document.getElementById('buy-button');
+            if (buyButton) {
+                buyButton.addEventListener('click', function() {
+                    // Logique d'achat à implémenter (ex: redirection vers panier, modal, etc.)
+                    alert("Redirection vers le processus d'achat (à implémenter) !");
+                });
+            }
+
+            // Le bouton "Accueil" dans le header est un lien <a>, donc le script
+            // pour la redirection de 'back-home-button' vers '/produits/' n'est plus utilisé ici,
+            // car le bouton du header standard pointe vers '/'.
+        });
+    </script>
+</body>
+</html>

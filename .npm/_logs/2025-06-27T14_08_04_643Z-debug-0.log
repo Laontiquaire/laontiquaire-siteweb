@@ -1,0 +1,105 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.2
+2 info using node@v21.7.3
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/container/.npmrc
+5 silly config load:file:/usr/local/etc/npmrc
+6 verbose title npm install
+7 verbose argv "install"
+8 verbose logfile logs-max:10 dir:/home/container/.npm/_logs/2025-06-27T14_08_04_643Z-
+9 verbose logfile /home/container/.npm/_logs/2025-06-27T14_08_04_643Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly packumentCache heap:271581184 maxSize:67895296 maxEntrySize:33947648
+12 silly idealTree buildDeps
+13 silly reify moves {}
+14 silly audit bulk request {
+14 silly audit   accepts: [ '1.3.8' ],
+14 silly audit   'array-flatten': [ '1.1.1' ],
+14 silly audit   'body-parser': [ '1.20.3' ],
+14 silly audit   bytes: [ '3.1.2' ],
+14 silly audit   'call-bind': [ '1.0.7' ],
+14 silly audit   'content-disposition': [ '0.5.4' ],
+14 silly audit   'content-type': [ '1.0.5' ],
+14 silly audit   cookie: [ '0.7.1' ],
+14 silly audit   'cookie-signature': [ '1.0.6' ],
+14 silly audit   debug: [ '2.6.9' ],
+14 silly audit   'define-data-property': [ '1.1.4' ],
+14 silly audit   depd: [ '2.0.0' ],
+14 silly audit   destroy: [ '1.2.0' ],
+14 silly audit   'ee-first': [ '1.1.1' ],
+14 silly audit   encodeurl: [ '2.0.0', '1.0.2' ],
+14 silly audit   'es-define-property': [ '1.0.0' ],
+14 silly audit   'es-errors': [ '1.3.0' ],
+14 silly audit   'escape-html': [ '1.0.3' ],
+14 silly audit   etag: [ '1.8.1' ],
+14 silly audit   express: [ '4.21.1' ],
+14 silly audit   finalhandler: [ '1.3.1' ],
+14 silly audit   forwarded: [ '0.2.0' ],
+14 silly audit   fresh: [ '0.5.2' ],
+14 silly audit   'function-bind': [ '1.1.2' ],
+14 silly audit   'get-intrinsic': [ '1.2.4' ],
+14 silly audit   gopd: [ '1.0.1' ],
+14 silly audit   'has-property-descriptors': [ '1.0.2' ],
+14 silly audit   'has-proto': [ '1.0.3' ],
+14 silly audit   'has-symbols': [ '1.0.3' ],
+14 silly audit   hasown: [ '2.0.2' ],
+14 silly audit   'http-errors': [ '2.0.0' ],
+14 silly audit   'iconv-lite': [ '0.4.24' ],
+14 silly audit   inherits: [ '2.0.4' ],
+14 silly audit   'ipaddr.js': [ '1.9.1' ],
+14 silly audit   'media-typer': [ '0.3.0' ],
+14 silly audit   'merge-descriptors': [ '1.0.3' ],
+14 silly audit   methods: [ '1.1.2' ],
+14 silly audit   mime: [ '1.6.0' ],
+14 silly audit   'mime-db': [ '1.52.0' ],
+14 silly audit   'mime-types': [ '2.1.35' ],
+14 silly audit   ms: [ '2.0.0', '2.1.3' ],
+14 silly audit   negotiator: [ '0.6.3' ],
+14 silly audit   'object-inspect': [ '1.13.3' ],
+14 silly audit   'on-finished': [ '2.4.1' ],
+14 silly audit   parseurl: [ '1.3.3' ],
+14 silly audit   'path-to-regexp': [ '0.1.10' ],
+14 silly audit   'proxy-addr': [ '2.0.7' ],
+14 silly audit   qs: [ '6.13.0' ],
+14 silly audit   'range-parser': [ '1.2.1' ],
+14 silly audit   'raw-body': [ '2.5.2' ],
+14 silly audit   'safe-buffer': [ '5.2.1' ],
+14 silly audit   'safer-buffer': [ '2.1.2' ],
+14 silly audit   send: [ '0.19.0' ],
+14 silly audit   'serve-static': [ '1.16.2' ],
+14 silly audit   'set-function-length': [ '1.2.2' ],
+14 silly audit   setprototypeof: [ '1.2.0' ],
+14 silly audit   'side-channel': [ '1.0.6' ],
+14 silly audit   statuses: [ '2.0.1' ],
+14 silly audit   toidentifier: [ '1.0.1' ],
+14 silly audit   'type-is': [ '1.6.18' ],
+14 silly audit   unpipe: [ '1.0.0' ],
+14 silly audit   'utils-merge': [ '1.0.1' ],
+14 silly audit   vary: [ '1.1.2' ]
+14 silly audit }
+15 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1069ms
+16 silly audit report {
+16 silly audit report   'path-to-regexp': [
+16 silly audit report     {
+16 silly audit report       id: 1105199,
+16 silly audit report       url: 'https://github.com/advisories/GHSA-rhx6-c78j-4q9w',
+16 silly audit report       title: 'path-to-regexp contains a ReDoS',
+16 silly audit report       severity: 'high',
+16 silly audit report       vulnerable_versions: '<0.1.12',
+16 silly audit report       cwe: [Array],
+16 silly audit report       cvss: [Object]
+16 silly audit report     }
+16 silly audit report   ]
+16 silly audit report }
+17 silly packumentCache corgi:https://registry.npmjs.org/path-to-regexp cache-miss
+18 http fetch GET 200 https://registry.npmjs.org/path-to-regexp 105ms (cache revalidated)
+19 silly packumentCache corgi:https://registry.npmjs.org/path-to-regexp set size:62557 disposed:false
+20 silly packumentCache corgi:https://registry.npmjs.org/express cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/express 131ms (cache revalidated)
+22 silly packumentCache corgi:https://registry.npmjs.org/express set size:322362 disposed:false
+23 verbose cwd /home/container
+24 verbose os Linux 6.8.0-62-generic
+25 verbose node v21.7.3
+26 verbose npm  v10.9.2
+27 verbose exit 0
+28 info ok

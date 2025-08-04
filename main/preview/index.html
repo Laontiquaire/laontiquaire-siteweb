@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laontiquaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@latest/dist/lucide.min.js" defer></script>
+    <style>
+        /* Police personnalisée (optionnel, Tailwind utilise une bonne police par défaut) */
+        body {
+            font-family: 'Inter', sans-serif; /* Inter est une police souvent utilisée avec Tailwind */
+        }
+
+        /* Animation d'apparition initiale des sections */
+        .section-card {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .section-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Style pour l'overlay de la section */
+        .section-card .overlay-content {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .section-card:hover .overlay-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes pour l'animation de la flèche */
+        @keyframes bounce-arrow {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+        }
+        .animate-bounce-arrow {
+            animation: bounce-arrow 1.5s infinite;
+        }
+
+        /* Styles pour la modale SUPPRIMÉS */
+
+    </style>
+    <script>
+        // Configuration de Tailwind (optionnel, pour des personnalisations plus poussées)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A90E2', // Bleu original
+                        'primary-dark': '#357ABD', // Bleu plus foncé pour hover
+                        accent: '#F5A623', // Une couleur d'accentuation orange
+                        lightbg: '#F7FAFC', // Fond légèrement grisé
+                    },
+                    animation: {
+                        'bounce-arrow': 'bounce-arrow 1.5s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-lightbg text-gray-800 antialiased">
+
+    <header class="bg-gradient-to-r from-primary to-primary-dark text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="/logo/logo.png" alt="Logo Laontiquaire" class="h-12 w-12 rounded-full border-2 border-white">
+                <h1 class="text-3xl font-bold tracking-tight">Laontiquaire</h1>
+            </div>
+            </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+            <a href="/preview/engagements" class="section-link group block section-card">
+                <section class="engagements bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 overflow-hidden h-full flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center text-primary mb-4">
+                            <i data-lucide="heart-handshake" class="w-8 h-8 mr-3"></i>
+                            <h2 class="text-2xl font-semibold">Nos engagements</h2>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">Nous voulons encourager les enfants à lire et nous allons en maison de retraite pour passer du temps avec eux.</p>
+                    </div>
+                    <div class="overlay bg-primary/90 text-white p-8 absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <div class="overlay-content opacity-0 transform translate-y-5">
+                             <i data-lucide="book-open-check" class="w-12 h-12 mb-3"></i>
+                            <h3 class="text-xl font-bold mb-2">Nos engagements</h3>
+                            <p class="text-sm mb-3">Découvrez comment nous faisons la différence.</p>
+                            <p class="arrow text-2xl animate-bounce-arrow">➔</p>
+                        </div>
+                    </div>
+                </section>
+            </a>
+
+            <a href="/preview/produits" class="section-link group block section-card">
+                <section class="produits bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 overflow-hidden h-full flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center text-primary mb-4">
+                            <i data-lucide="package-check" class="w-8 h-8 mr-3"></i>
+                            <h2 class="text-2xl font-semibold">Nos produits</h2>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">Nous vendons des livres que l'on écrit avec soin et un jeu de société que l'on a conçu.</p>
+                    </div>
+                    <div class="overlay bg-primary/90 text-white p-8 absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                         <div class="overlay-content opacity-0 transform translate-y-5">
+                            <i data-lucide="shopping-bag" class="w-12 h-12 mb-3"></i>
+                            <h3 class="text-xl font-bold mb-2">Nos produits</h3>
+                            <p class="text-sm mb-3">Explorez nos créations uniques.</p>
+                            <p class="arrow text-2xl animate-bounce-arrow">➔</p>
+                        </div>
+                    </div>
+                </section>
+            </a>
+
+            <a href="/preview/contact/liens-sociaux" class="section-link group block section-card">
+                <section class="liens-sociaux bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 overflow-hidden h-full flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center text-primary mb-4">
+                           <i data-lucide="share-2" class="w-8 h-8 mr-3"></i>
+                            <h2 class="text-2xl font-semibold">Liens sociaux</h2>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">Suivez-nous sur Instagram et Snapchat ! Restez connectés.</p>
+                    </div>
+                    <div class="overlay bg-primary/90 text-white p-8 absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <div class="overlay-content opacity-0 transform translate-y-5">
+                            <i data-lucide="thumbs-up" class="w-12 h-12 mb-3"></i>
+                            <h3 class="text-xl font-bold mb-2">Liens sociaux</h3>
+                            <p class="text-sm mb-3">Rejoignez notre communauté.</p>
+                            <p class="arrow text-2xl animate-bounce-arrow">➔</p>
+                        </div>
+                    </div>
+                </section>
+            </a>
+
+            <a href="mailto:laontiquaire@gmail.com" target="_blank" class="section-link group block section-card">
+                <section class="contact bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 overflow-hidden h-full flex flex-col">
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center text-primary mb-4">
+                            <i data-lucide="mail" class="w-8 h-8 mr-3"></i>
+                            <h2 class="text-2xl font-semibold">Contact</h2>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">Une question ? Une suggestion ? Écrivez-nous à <span class="font-medium text-primary-dark">laontiquaire@gmail.com</span>.</p>
+                    </div>
+                     <div class="overlay bg-primary/90 text-white p-8 absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <div class="overlay-content opacity-0 transform translate-y-5">
+                            <i data-lucide="send" class="w-12 h-12 mb-3"></i>
+                            <h3 class="text-xl font-bold mb-2">Contactez-nous</h3>
+                            <p class="text-sm mb-3">Nous sommes à votre écoute.</p>
+                            <p class="arrow text-2xl animate-bounce-arrow">➔</p>
+                        </div>
+                    </div>
+                </section>
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="currentYear"></span> Laontiquaire. Tous droits réservés.</p>
+            <p class="text-sm mt-1">Conçu avec <i data-lucide="heart" class="inline-block w-4 h-4 text-red-500"></i> et passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialisation des icônes Lucide
+            if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+                lucide.createIcons();
+            } else {
+                console.error("Lucide library not loaded or createIcons function not available when DOMContentLoaded fired. Check script loading order and `defer` attribute.");
+            }
+
+            // Animation d'apparition pour chaque section
+            const sections = document.querySelectorAll(".section-card");
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add("visible");
+                }, 150 * index);
+            });
+
+            // Gestion de la modale SUPPRIMÉE
+
+            // Mettre à jour l'année dans le pied de page
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
